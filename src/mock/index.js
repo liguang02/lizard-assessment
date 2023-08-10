@@ -4,10 +4,10 @@ import data from './data.json';
 
 createServer({
   routes() {
-    this.namespace = 'api/posts';
+    this.namespace = 'api';
 
-    this.get('/', (schema, request) => {
-      return schema.data.all();
+    this.get('/posts', (schema, request) => {
+      return data;
     });
   },
 });

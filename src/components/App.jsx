@@ -1,18 +1,43 @@
 import { useEffect, useState } from "react";
-
+import Navbar from "./Navbar";
+import Home from "./Home";
 function App() {
-  let [posts,setPosts] = useState([])
-  useEffect(()=> {
-    fetch("/api/posts").then((res)=> res.json()).then((json)=> {
-      setPosts(json.posts)
-    })
-  })
+ 
   return (
-    <ul>
-    {posts}
-    "happy"
+    <div className="App">
+      <h1>Lizard Assessment</h1>
+      <Navbar />
+      <div className="content">
+        <Home />
 
-  </ul>)
+        {/* <table>
+          <tr>
+            <th>Author name</th>
+            <th>Post Title</th>
+            <th>Publish date</th>
+          </tr>
+          <tr>
+              <td>
+                  {posts.map((post)=> (
+                  <div key={post.id}>{post.author.name}</div>))}
+
+              </td>
+              <td>
+                {posts.map(post=> <div key={post.id}>{post.title}</div>)}
+              </td>
+              <td>
+                {posts.map(post=> <div key={post.id}>{post.publishDate}</div>)}
+              </td>
+
+            </tr>
+
+
+        </table> */}
+      </div>
+      
+
+    </div>)
+    
 }
 
 export default App;
