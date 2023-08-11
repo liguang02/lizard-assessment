@@ -20,7 +20,7 @@ const Home = () => {
         <div className="home">
             <CategoryList posts={posts}/>
 
-            <PostList posts={posts} handleDelete={handleDelete} />
+            {/* <PostList posts={posts} handleDelete={handleDelete} /> */}
 
         </div>
     );
