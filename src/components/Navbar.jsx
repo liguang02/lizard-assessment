@@ -1,3 +1,4 @@
+// a very basic and simple navigation bar component that can be expanded upon in the future
 const Navbar = () => {
     return ( 
         <nav className="navbar">

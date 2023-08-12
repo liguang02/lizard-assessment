@@ -1,41 +1,13 @@
-import { useEffect, useState } from "react";
+// main component of the project, where all the other components are rendered
 import Navbar from "./Navbar";
 import Home from "./Home";
 function App() {
  
   return (
-    <div className="App">
+    <div className="content">
       <h1>Lizard Assessment</h1>
-      <Navbar />
-      <div className="content">
+        <Navbar />
         <Home />
-
-        {/* <table>
-          <tr>
-            <th>Author name</th>
-            <th>Post Title</th>
-            <th>Publish date</th>
-          </tr>
-          <tr>
-              <td>
-                  {posts.map((post)=> (
-                  <div key={post.id}>{post.author.name}</div>))}
-
-              </td>
-              <td>
-                {posts.map(post=> <div key={post.id}>{post.title}</div>)}
-              </td>
-              <td>
-                {posts.map(post=> <div key={post.id}>{post.publishDate}</div>)}
-              </td>
-
-            </tr>
-
-
-        </table> */}
-      </div>
-      
-
     </div>)
     
 }

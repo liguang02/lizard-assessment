@@ -1,4 +1,5 @@
 import { createServer } from 'miragejs';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import data from './data.json';
 
