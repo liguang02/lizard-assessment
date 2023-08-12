@@ -1,10 +1,8 @@
-import {useState} from 'react';
 import AppPagination from "./AppPagination";
-import Button from 'react-bootstrap/Button';
+import { useState } from "react";
 
-
-const PostList = ({posts, currentPage, setCurrentPage}) => {
-    
+const PostList = ({posts}) => {
+    const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5;
     // calculate the total number of pages based on the number of posts and the items per page
     const total_pages = Math.ceil(posts.length / itemsPerPage);
@@ -20,10 +18,8 @@ const PostList = ({posts, currentPage, setCurrentPage}) => {
                     <h2>{data.title}</h2>
                     <p><b>Posted by </b>{data.author.name}</p>
                     <p><b>Summary: </b>{data.summary} </p>
-                    <p><b>Categories: </b>{data.categories.map((category)=> (<div key={category.id}>{category.name}</div>))} 
-                        </p>
-
-                    <Button variant ="primary" >Detail</Button>
+                    <div className="category-view"><b>Categories: </b> {data.categories.map((category)=> (<div key={category.id}><u>{category.name}</u></div>))} </div>
+                    
                 </div>
             ))}
             <br></br>

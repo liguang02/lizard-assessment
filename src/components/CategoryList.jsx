@@ -8,6 +8,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 import {Button} from 'react-bootstrap';
+import React from "react";
 
 const ITEM_HEIGHT = 50;
 const ITEM_PADDING_TOP = 8;
@@ -19,7 +20,7 @@ const MenuProps = {
     },
   },
 };
-
+// this component takes in posts and setPosts so that it can update the posts state in the home component after the category filter is applied
 const CategoryList = ({posts, setPosts}) => {
     const [categoryList,setCategoryList] = useState([]);
     // a state to check if the filter button is clicked

@@ -1,5 +1,6 @@
 // utilized Pagination from Material UI to create a pagination component
 import Pagination from "@mui/material/Pagination";
+import React from "react";
 
 // a reusable component that will be used to create a pagination
 const AppPagination = ({setCurrentPage, total_pages}) => {
